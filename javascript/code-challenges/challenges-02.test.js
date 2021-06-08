@@ -7,11 +7,13 @@ CHALLENGE 1 - Review
 Write a function named raisedToTheThird that takes in an array of numbers and returns a new array of each of those numbers raised to the 3rd power (hint: look up Math.pow()). Use forEach to solve this problem.
 
 ------------------------------------------------------------------------------------------------ */
-const Number=[];
-const raisedToTheThird=Number.map((value) => {
- return Math.pow(value,3);
-});
-
+const raisedToTheThird = (arr) => {
+  let arrpow =[];
+  arr.forEach((num)=>{
+    arrpow.push(Math.pow(num, 3));
+  });
+  return arrpow;
+};
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
@@ -19,12 +21,12 @@ Write a function named addOne that, given an array of numbers, uses map to retur
 ------------------------------------------------------------------------------------------------ */
 
 
-const addOne = (arr) => {
-  // Solution code here...
-  let arrnumbers =arr.map((value)=>{
-    return value+1;
+const raisedToTheThird = (arr) => {
+  let third = [];
+  arr.forEach ( i => {
+    third.push(Math.pow(i,3));
   });
-  return arrnumbers;
+  return third;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -51,12 +53,12 @@ For example, twoToThe([1,2,3]) returns [2,4,8] because 2 ^ 1 = 2, 2 ^ 2 = 4, and
 ------------------------------------------------------------------------------------------------ */
 
 const forLoopTwoToThe = (arr) => {
-  // Solution code here...
-  let arrintegers=arr.map((item)=>{
-return math.pow(2,item);
-});
-return arrintegers;
-};
+  let arrintegers = [];
+  for (let i=0; i < arr.length; i++){
+    arrintegers.push(Math.pow(2,arr[i]));
+  };
+  return arrintegers;
+ };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
