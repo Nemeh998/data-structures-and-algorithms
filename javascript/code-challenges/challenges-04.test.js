@@ -135,6 +135,7 @@ const sortByPrice = (arr) => {
   return localArray;
 };
 
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
 
