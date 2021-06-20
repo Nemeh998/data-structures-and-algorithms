@@ -8,10 +8,10 @@ Write a function named returnTen, takes in a string and uses split and splice to
 ------------------------------------------------------------------------------------------------ */
 
 function returnTen(str){
-  let localArray = [];
-  localArray = str.split('');
-  localArray.splice(0, localArray.length - 10);
-  return localArray;
+  let newArr = [];
+  newArr = str.split('');
+  newArr.splice(0, newArr.length - 10);
+  return newArr;
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -29,8 +29,8 @@ For example:
 return: 23
 ------------------------------------------------------------------------------------------------ */
 const findMax = (matrix) => {
-  let localArray = matrix.flat();
-  return localArray.reduce((acc, val) => {
+  let newArr = matrix.flat();
+  return newArr.reduce((acc, val) => {
     return (acc > val ? acc : val);
   }, 0)
 };
@@ -50,8 +50,8 @@ For example:
 return: 35
 ------------------------------------------------------------------------------------------------ */
 const totalSum = (matrix) => {
-  let localArray = matrix.flat();
-  return localArray.reduce((acc, val) => {
+  let newArr = matrix.flat();
+  return newArr.reduce((acc, val) => {
     return acc + val;
   }, 0)
 };
@@ -105,14 +105,14 @@ Write a function named salesData that uses forEach to iterate over the hourlySal
 ------------------------------------------------------------------------------------------------ */
 
 const salesData = (hours, data) => {
-  const localArray = [];
+  const newArr = [];
   function addTime(hour, cookie) {
     return { sales: `${cookie} cookies`, time: hour }
   }
   for (let i = 0; i < hours.length; i++) {
-    localArray.push(addTime(hours[i], data[i]));
+    newArr.push(addTime(hours[i], data[i]));
   }
-  return localArray;
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
