@@ -9,8 +9,14 @@ using the 'reduce' method.
 E.g. [4,2,7,5,9,2] -> 9
 ------------------------------------------------------------------------------------------------ */
 const maxInArray = (arr) => {
-  // Solution code here...
-};
+  let maxArr = arr.reduce((acc, currentValue) => {
+    if (acc > currentValue) {
+        return acc;
+    } else {
+        return currentValue;
+    }
+}, 0);
+return maxArr;
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -38,8 +44,11 @@ Write a function named checkValues that takes in an object and a value and retur
 ------------------------------------------------------------------------------------------------ */
 
 const checkValues = (obj, value) => {
-  let courseKeysArr = Object.keys(obj)
-  return courseKeysArr;  // Solution code here...
+  if (Object.values(obj).includes(value)) {
+    return true;
+} else {
+    return false;
+} // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -62,13 +71,11 @@ HR has asked you to change the data to make it easier to print so that it looks 
 ------------------------------------------------------------------------------------------------ */
 
 const updateNumbers = (obj) => {
-  let localArrayKeys = Object.keys(obj);
-  let localArrayVals = Object.values(obj);
-  let newArray = [];
-  localArrayKeys.forEach((item, index) => {
-    newArray.push(${item}: ${localArrayVals[index]});
+  let newArr = [];
+  Object.keys(obj).forEach((key) => {
+      newArr.push(`${key}: ${obj[key]}`);
   });
-  return newArray;
+  return newArr;
 };
 
 
