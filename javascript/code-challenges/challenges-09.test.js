@@ -9,6 +9,7 @@ using the 'reduce' method.
 E.g. [4,2,7,5,9,2] -> 9
 ------------------------------------------------------------------------------------------------ */
 const maxInArray = (arr) => {
+
   let maxArr = arr.reduce((acc, currentValue) => {
     if (acc > currentValue) {
         return acc;
@@ -17,6 +18,7 @@ const maxInArray = (arr) => {
     }
 }, 0);
 return maxArr;
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -71,11 +73,13 @@ HR has asked you to change the data to make it easier to print so that it looks 
 ------------------------------------------------------------------------------------------------ */
 
 const updateNumbers = (obj) => {
+
   let newArr = [];
   Object.keys(obj).forEach((key) => {
       newArr.push(`${key}: ${obj[key]}`);
   });
   return newArr;
+
 };
 
 
